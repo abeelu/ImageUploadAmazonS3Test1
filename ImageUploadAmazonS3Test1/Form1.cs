@@ -19,7 +19,7 @@ namespace ImageUploadAmazonS3Test1
 
         private void openImg_Click(object sender, EventArgs e)
         {
-            string filename = @"C:\Users\alu\Desktop\grumpyCat.jpg";
+            string filename = @"C:\Users\alu\Desktop\keepCalm.png";
             //System.IO.StreamReader sr = new System.IO.StreamReader(filename);
             Bitmap bit = new Bitmap(filename);
             imgDisplayPicBox.Image = bit;
