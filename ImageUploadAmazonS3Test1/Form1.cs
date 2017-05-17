@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace ImageUploadAmazonS3Test1
 {
-    public partial class Form1 : Form
+    public partial class testImgUpload : Form
     {
-        public Form1()
+        public testImgUpload()
         {
             InitializeComponent();
+        }
+
+        private void openImg_Click(object sender, EventArgs e)
+        {
+            string filename = @"C:\Users\alu\Desktop\grumpyCat.jpg";
+            //System.IO.StreamReader sr = new System.IO.StreamReader(filename);
+            Bitmap bit = new Bitmap(filename);
+            imgDisplayPicBox.Image = bit;
         }
     }
 }
