@@ -42,13 +42,15 @@
             this.username_lbl = new System.Windows.Forms.Label();
             this.password_lbl = new System.Windows.Forms.Label();
             this.login_btn = new System.Windows.Forms.Button();
+            this.token_txtBx = new System.Windows.Forms.TextBox();
             this.token_lbl = new System.Windows.Forms.Label();
+            this.saveImg_progressBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.imgDisplay_picBox)).BeginInit();
             this.SuspendLayout();
             // 
             // openImg_btn
             // 
-            this.openImg_btn.Location = new System.Drawing.Point(706, 685);
+            this.openImg_btn.Location = new System.Drawing.Point(835, 649);
             this.openImg_btn.Name = "openImg_btn";
             this.openImg_btn.Size = new System.Drawing.Size(253, 65);
             this.openImg_btn.TabIndex = 0;
@@ -60,13 +62,13 @@
             // 
             this.imgDisplay_picBox.Location = new System.Drawing.Point(26, 27);
             this.imgDisplay_picBox.Name = "imgDisplay_picBox";
-            this.imgDisplay_picBox.Size = new System.Drawing.Size(587, 468);
+            this.imgDisplay_picBox.Size = new System.Drawing.Size(583, 434);
             this.imgDisplay_picBox.TabIndex = 1;
             this.imgDisplay_picBox.TabStop = false;
             // 
             // saveAsName_txtBox
             // 
-            this.saveAsName_txtBox.Location = new System.Drawing.Point(706, 576);
+            this.saveAsName_txtBox.Location = new System.Drawing.Point(835, 540);
             this.saveAsName_txtBox.Name = "saveAsName_txtBox";
             this.saveAsName_txtBox.Size = new System.Drawing.Size(234, 31);
             this.saveAsName_txtBox.TabIndex = 2;
@@ -74,7 +76,7 @@
             // saveAs_lbl
             // 
             this.saveAs_lbl.AutoSize = true;
-            this.saveAs_lbl.Location = new System.Drawing.Point(706, 545);
+            this.saveAs_lbl.Location = new System.Drawing.Point(835, 509);
             this.saveAs_lbl.Name = "saveAs_lbl";
             this.saveAs_lbl.Size = new System.Drawing.Size(98, 25);
             this.saveAs_lbl.TabIndex = 3;
@@ -85,7 +87,7 @@
             this.jpg_checkBx.AutoSize = true;
             this.jpg_checkBx.Checked = true;
             this.jpg_checkBx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.jpg_checkBx.Location = new System.Drawing.Point(720, 630);
+            this.jpg_checkBx.Location = new System.Drawing.Point(849, 594);
             this.jpg_checkBx.Name = "jpg_checkBx";
             this.jpg_checkBx.Size = new System.Drawing.Size(91, 29);
             this.jpg_checkBx.TabIndex = 4;
@@ -104,9 +106,9 @@
             // 
             // fileName_txtBx
             // 
-            this.fileName_txtBx.Location = new System.Drawing.Point(644, 464);
+            this.fileName_txtBx.Location = new System.Drawing.Point(634, 464);
             this.fileName_txtBx.Name = "fileName_txtBx";
-            this.fileName_txtBx.Size = new System.Drawing.Size(425, 31);
+            this.fileName_txtBx.Size = new System.Drawing.Size(454, 31);
             this.fileName_txtBx.TabIndex = 6;
             // 
             // fileNameTestImg_lbl
@@ -144,7 +146,7 @@
             // password_lbl
             // 
             this.password_lbl.AutoSize = true;
-            this.password_lbl.Location = new System.Drawing.Point(634, 154);
+            this.password_lbl.Location = new System.Drawing.Point(633, 154);
             this.password_lbl.Name = "password_lbl";
             this.password_lbl.Size = new System.Drawing.Size(112, 25);
             this.password_lbl.TabIndex = 11;
@@ -152,28 +154,46 @@
             // 
             // login_btn
             // 
-            this.login_btn.Location = new System.Drawing.Point(760, 220);
+            this.login_btn.Location = new System.Drawing.Point(760, 208);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(155, 61);
+            this.login_btn.Size = new System.Drawing.Size(149, 43);
             this.login_btn.TabIndex = 12;
             this.login_btn.Text = "Login";
             this.login_btn.UseVisualStyleBackColor = true;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
+            // token_txtBx
+            // 
+            this.token_txtBx.Location = new System.Drawing.Point(26, 537);
+            this.token_txtBx.Multiline = true;
+            this.token_txtBx.Name = "token_txtBx";
+            this.token_txtBx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.token_txtBx.Size = new System.Drawing.Size(773, 265);
+            this.token_txtBx.TabIndex = 14;
+            // 
             // token_lbl
             // 
             this.token_lbl.AutoSize = true;
-            this.token_lbl.Location = new System.Drawing.Point(41, 545);
+            this.token_lbl.Location = new System.Drawing.Point(21, 509);
             this.token_lbl.Name = "token_lbl";
             this.token_lbl.Size = new System.Drawing.Size(71, 25);
             this.token_lbl.TabIndex = 13;
             this.token_lbl.Text = "token:";
             // 
+            // saveImg_progressBar
+            // 
+            this.saveImg_progressBar.Location = new System.Drawing.Point(26, 467);
+            this.saveImg_progressBar.Name = "saveImg_progressBar";
+            this.saveImg_progressBar.Size = new System.Drawing.Size(583, 31);
+            this.saveImg_progressBar.TabIndex = 15;
+            // 
             // testImgUpload
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 814);
+            this.ClientSize = new System.Drawing.Size(1124, 852);
+            this.Controls.Add(this.saveImg_progressBar);
+            this.Controls.Add(this.token_txtBx);
             this.Controls.Add(this.token_lbl);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.password_lbl);
@@ -189,6 +209,7 @@
             this.Controls.Add(this.imgDisplay_picBox);
             this.Controls.Add(this.openImg_btn);
             this.Name = "testImgUpload";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Upload Image";
             ((System.ComponentModel.ISupportInitialize)(this.imgDisplay_picBox)).EndInit();
             this.ResumeLayout(false);
@@ -212,7 +233,9 @@
         private System.Windows.Forms.Label username_lbl;
         private System.Windows.Forms.Label password_lbl;
         private System.Windows.Forms.Button login_btn;
+        private System.Windows.Forms.TextBox token_txtBx;
         private System.Windows.Forms.Label token_lbl;
+        private System.Windows.Forms.ProgressBar saveImg_progressBar;
     }
 }
 

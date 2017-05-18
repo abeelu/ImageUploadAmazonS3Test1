@@ -37,8 +37,8 @@ namespace ImageUploadAmazonS3Test1
         {
             using (var handler = new WebRequestHandler() { ServerCertificateValidationCallback = (s, certificate, chain, errors) => true })
             using (var c = new HttpClient(handler))
-            {               
-                var bearerResult = await c.PostAsync(tokenEndpointUrl, body);
+            {
+                var bearerResult = await c.PostAsync(tokenEndpointUrl, body).ConfigureAwait(continueOnCapturedContext:false);
 
                 if (!bearerResult.IsSuccessStatusCode)
                     return null;

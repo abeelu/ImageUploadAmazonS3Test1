@@ -22,13 +22,14 @@ namespace ImageUploadAmazonS3Test1
 
         private void openImg_Click(object sender, EventArgs e)
         {
+            saveImg_progressBar.Value = 0;
             string filename = fileName_txtBx.Text; //@"C:\Users\alu\Desktop\testingImages\grumpyCat.jpg";
             string saveNameAs = saveAsName_txtBox.Text;
             string endImgTag = "";
             
             //System.IO.StreamReader sr = new System.IO.StreamReader(filename);
             Bitmap bmp = new Bitmap(filename);
-            imgDisplay_picBox.Image = bmp;
+            //imgDisplay_picBox.Image = bmp;
 
             filename = filename.Remove(filename.LastIndexOf('\\'));
 
@@ -38,6 +39,7 @@ namespace ImageUploadAmazonS3Test1
             }
             
             bmp.Save( filename + "\\" + saveNameAs + endImgTag);
+            saveImg_progressBar.Value = 100;
         }
 
         private void getImgFile_btn_Click(object sender, EventArgs e)
@@ -56,6 +58,10 @@ namespace ImageUploadAmazonS3Test1
                     // output to fileName_txtBx
                     fileName_txtBx.Text = openFileName;
                     fileOpened = true;
+
+                    Bitmap bmp = new Bitmap(openFileName);
+                    imgDisplay_picBox.Image = bmp;
+                    saveImg_progressBar.Width = bmp.Width;
                 }
                 catch(Exception exp)
                 {
@@ -80,8 +86,8 @@ namespace ImageUploadAmazonS3Test1
 
             var token = AuthenticationS3.GetBearerAsync(new Uri("https://eadmsapps.com/auth/token"), AuthenticationS3.BuildClientCredentialsRequestBody("F1494579-AB46-4528-B5CB-DE63D754560F", "7X4X885JQbDQUEpL")).Result;
 
-            token_lbl.Text = "Token: " + token;       
+            token_txtBx.Text = "Token: " + token;       
 
-        }
+        }       
     }
 }
