@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Newtonsoft.Json.Linq;
+
+
 namespace ImageUploadAmazonS3Test1
 {
     public partial class testImgUpload : Form
@@ -63,11 +66,22 @@ namespace ImageUploadAmazonS3Test1
                 
             }
 
-            // Cancel pressed
+            // Cancel pressed hello
             else if(result == DialogResult.Cancel)
             {
                 return;
             }
+        }
+
+        private void login_btn_Click(object sender, EventArgs e)
+        {
+            string userName = username_txtBx.Text;
+            string userPassword = password_txtBx.Text;
+
+            var token = AuthenticationS3.GetBearerAsync(new Uri("https://eadmsapps.com/auth/token"), AuthenticationS3.BuildClientCredentialsRequestBody("F1494579-AB46-4528-B5CB-DE63D754560F", "7X4X885JQbDQUEpL")).Result;
+
+            token_lbl.Text = "Token: " + token;       
+
         }
     }
 }
