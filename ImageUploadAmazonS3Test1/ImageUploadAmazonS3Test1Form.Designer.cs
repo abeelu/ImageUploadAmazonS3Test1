@@ -42,7 +42,7 @@
             // 
             // openImg_btn
             // 
-            this.openImg_btn.Location = new System.Drawing.Point(742, 569);
+            this.openImg_btn.Location = new System.Drawing.Point(730, 423);
             this.openImg_btn.Name = "openImg_btn";
             this.openImg_btn.Size = new System.Drawing.Size(253, 65);
             this.openImg_btn.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             // saveAsName_txtBox
             // 
-            this.saveAsName_txtBox.Location = new System.Drawing.Point(742, 460);
+            this.saveAsName_txtBox.Location = new System.Drawing.Point(730, 314);
             this.saveAsName_txtBox.Name = "saveAsName_txtBox";
             this.saveAsName_txtBox.Size = new System.Drawing.Size(234, 31);
             this.saveAsName_txtBox.TabIndex = 2;
@@ -68,18 +68,18 @@
             // saveAs_lbl
             // 
             this.saveAs_lbl.AutoSize = true;
-            this.saveAs_lbl.Location = new System.Drawing.Point(742, 429);
+            this.saveAs_lbl.Location = new System.Drawing.Point(730, 283);
             this.saveAs_lbl.Name = "saveAs_lbl";
-            this.saveAs_lbl.Size = new System.Drawing.Size(110, 25);
+            this.saveAs_lbl.Size = new System.Drawing.Size(98, 25);
             this.saveAs_lbl.TabIndex = 3;
-            this.saveAs_lbl.Text = "Save As...";
+            this.saveAs_lbl.Text = "Save As:";
             // 
             // jpg_checkBx
             // 
             this.jpg_checkBx.AutoSize = true;
             this.jpg_checkBx.Checked = true;
             this.jpg_checkBx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.jpg_checkBx.Location = new System.Drawing.Point(756, 514);
+            this.jpg_checkBx.Location = new System.Drawing.Point(744, 368);
             this.jpg_checkBx.Name = "jpg_checkBx";
             this.jpg_checkBx.Size = new System.Drawing.Size(91, 29);
             this.jpg_checkBx.TabIndex = 4;
@@ -92,13 +92,9 @@
             this.getImgFile_btn.Name = "getImgFile_btn";
             this.getImgFile_btn.Size = new System.Drawing.Size(251, 74);
             this.getImgFile_btn.TabIndex = 5;
-            this.getImgFile_btn.Text = "Which image is being tested?";
+            this.getImgFile_btn.Text = "Open Finder (Which image is being tested?)";
             this.getImgFile_btn.UseVisualStyleBackColor = true;
             this.getImgFile_btn.Click += new System.EventHandler(this.getImgFile_btn_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // fileName_txtBx
             // 

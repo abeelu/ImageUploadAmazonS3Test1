@@ -34,7 +34,7 @@ namespace ImageUploadAmazonS3Test1
                 endImgTag = ".jpg";
             }
             
-            bmp.Save("\\" + filename + saveNameAs + endImgTag);
+            bmp.Save( filename + "\\" + saveNameAs + endImgTag);
         }
 
         private void getImgFile_btn_Click(object sender, EventArgs e)
